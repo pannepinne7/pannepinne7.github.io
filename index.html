@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Piano Practice Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+
+    <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div id="menuItems" class="menu hidden">
+          <button onclick="showPage('home'); closeMenu()">Home</button>
+          <button onclick="showPage('scales'); closeMenu()">Scales</button>
+          <button onclick="showPage('chords'); closeMenu()">Chords</button>
+        </div>
+      </nav>
+      
+      
+      
+
+    <div id="homePage" class="page">
+      <h1>🎹 Welcome to Piano Practice Tracker</h1>
+      <div id="streak">🔥 Current Streak: 0 days</div>
+      <button id="practiceBtn">I Practiced Today!</button>
+    </div>
+
+    <div id="scalesPage" class="page hidden">
+      <h2>🎼 Scales</h2>
+
+      <div class="submenu">
+        <button class="submenu-toggle" onclick="toggleSubmenu('majorScalesList')">▶ Major Scales</button>
+        <ul id="majorScalesList" class="hidden"></ul>
+      </div>
+
+      <div class="submenu">
+        <button class="submenu-toggle" onclick="toggleSubmenu('minorScalesList')">▶ Minor Scales</button>
+        <ul id="minorScalesList" class="hidden"></ul>
+      </div>
+
+
+      <div class="submenu">
+        <button class="submenu-toggle" onclick="toggleSubmenu('majorPentatonicList')">▶ Major Pentatonic</button>
+        <ul id="majorPentatonicList" class="hidden"></ul>
+      </div>
+      
+      <div class="submenu">
+        <button class="submenu-toggle" onclick="toggleSubmenu('minorPentatonicList')">▶ Minor Pentatonic</button>
+        <ul id="minorPentatonicList" class="hidden"></ul>
+      </div>
+      
+      <div class="submenu">
+        <button class="submenu-toggle" onclick="toggleSubmenu('majorBluesList')">▶ Major Blues</button>
+        <ul id="majorBluesList" class="hidden"></ul>
+      </div>
+      
+      <div class="submenu">
+        <button class="submenu-toggle" onclick="toggleSubmenu('minorBluesList')">▶ Minor Blues</button>
+        <ul id="minorBluesList" class="hidden"></ul>
+      </div>
+      
+
+      
+
+    </div>
+
+    <div id="chordsPage" class="page hidden">
+        <h2>🎶 Chords</h2>
+      
+        <div class="submenu">
+          <button class="submenu-toggle" onclick="toggleSubmenu('majorChordsList')">▶ Major Chords</button>
+          <ul id="majorChordsList" class="hidden"></ul>
+        </div>
+      
+        <div class="submenu">
+          <button class="submenu-toggle" onclick="toggleSubmenu('minorChordsList')">▶ Minor Chords</button>
+          <ul id="minorChordsList" class="hidden"></ul>
+        </div>
+      
+        <div class="submenu">
+          <button class="submenu-toggle" onclick="toggleSubmenu('maj7ChordsList')">▶ Major 7 Chords</button>
+          <ul id="maj7ChordsList" class="hidden"></ul>
+        </div>
+      
+        <div class="submenu">
+          <button class="submenu-toggle" onclick="toggleSubmenu('min7ChordsList')">▶ Minor 7 Chords</button>
+          <ul id="min7ChordsList" class="hidden"></ul>
+        </div>
+    </div>
+
+    <div id="keyboardContainer" class="piano"></div>
+
+    <div id="scaleChordsContainer"></div>
+
+
+      
+
+  </div>
+
+  <script defer src="app.js"></script>
+</body>
+</html>
